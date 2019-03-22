@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Houlert.EditProperty"
+             Title="{Binding title}">
+
+
+    <ContentPage.Content>
+        <StackLayout x:Name="PropertyName" Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <ScrollView
+                Orientation="Vertical" VerticalOptions="FillAndExpand">
+
+                <StackLayout
+                    VerticalOptions="CenterAndExpand"
+                    Margin="0,0,0,20">
+
+                    <Entry IsVisible="False" Text="{Binding id,Mode=TwoWay}"/>
+
+                    <Label
+                        Text="Update  Property"
+                        TextColor="{StaticResource PrimaryColor}"
+                        FontSize="30"
+                        HorizontalTextAlignment="Center"
+                        FontAttributes="Bold" />
+
+
+                    <Label
+                        Text="Property Information"
+                        TextColor="{StaticResource AshColor}"
+                        FontSize="15"
+                        HorizontalTextAlignment="Center"
+                        FontAttributes="Italic"
+                        Margin="0,10,0,0" />
+
+                    <BoxView
+                        HeightRequest="1"
+                        BackgroundColor="{StaticResource AshColor}"
+                        HorizontalOptions="FillAndExpand" />
+
+
+                    <Entry
+                        Placeholder="Property Title"
+                        Text="{Binding title,Mode=TwoWay}" />
+
+
+                    <Picker x:Name="PropertyPurposeList"
+                            Title="Select Property Purpose"
+                            ItemsSource="{Binding PropertyPurposes,Mode=TwoWay}"
+                            ItemDisplayBinding="{Binding name,Mode=TwoWay}"
+                            SelectedItem="{Binding property_purpose,Mode=TwoWay}" />
+
+
+                    <Picker x:Name="PropertyTypeList"
+                            Title="Select  Property Type"
+                            ItemsSource="{Binding Property_types,Mode=TwoWay}"
+                            ItemDisplayBinding="{Binding name,Mode=TwoWay}"
+                            SelectedItem="{Binding property_type,Mode=TwoWay}" />
+
+
+                    <Picker x:Name="PropertySubTypeList"
+                            Title="Select Sub Property Type"
+                            ItemsSource="{Binding PropertySubTypes,Mode=TwoWay}"
+                            ItemDisplayBinding="{Binding name,Mode=TwoWay}"
+                            SelectedItem="{Binding property_subtype,Mode=TwoWay}" />
+
+
+                    <Picker x:Name="PropertyUseList"
+                            Title="Select Property Use"
+                            ItemsSource="{Binding PropertyUses,Mode=TwoWay}"
+                            ItemDisplayBinding="{Binding name,Mode=TwoWay}"
+                            SelectedItem="{Binding property_use,Mode=TwoWay}" />
+
+
+
+                    <Label
+                        Text="Property Features"
+                        TextColor="{StaticResource AshColor}"
+                        FontSize="15"
+                        HorizontalTextAlignment="Center"
+                        FontAttributes="Italic"
+                        Margin="0,10,0,0" />
+
+                    <BoxView
+                        HeightRequest="1"
+                        BackgroundColor="{StaticResource AshColor}"
+                        HorizontalOptions="FillAndExpand" />
+
+
+                    <Entry
+                        Keyboard="Numeric"
+                        Placeholder="Number of Bedroom"
+                        Text="{Binding bedroom,Mode=TwoWay}" />
+
+
+                    <Entry
+                        Keyboard="Numeric"
+                        Placeholder="Number of Bathroom"
+                        Text="{Binding bathroom,Mode=TwoWay}" />
+
+
+                    <Entry
+                        Keyboard="Numeric"
+                        Placeholder="Number of Toilet"
+                        Text="{Binding toilet,Mode=TwoWay}" />
+
+
+                    <Label
+                        Text="Property Description and Location"
+                        TextColor="{StaticResource AshColor}"
+                        FontSize="15"
+                        HorizontalTextAlignment="Center"
+                        FontAttributes="Italic"
+
+                        Margin="0,10,0,0" />
+
+
+                    <BoxView
+                        HeightRequest="1"
+                        BackgroundColor="{StaticResource AshColor}"
+                        HorizontalOptions="FillAndExpand" />
+
+
+                    <Entry
+                        Placeholder="Property Short Description"
+                        Text="{Binding short_description,Mode=TwoWay}" />
+
+                    <Entry
+                        Placeholder="Property Full Description"
+                        Text="{Binding description,Mode=TwoWay}" />
+
+                    <Entry
+                        Keyboard="Numeric"
+                        Placeholder="Property Price"
+                        Text="{Binding price,Mode=TwoWay}" />
+
+
+                    <Picker x:Name="StateList"
+                            Title="Select State"
+                            ItemsSource="{Binding States,Mode=TwoWay}"
+                            ItemDisplayBinding="{Binding name,Mode=TwoWay}"
+                            SelectedItem="{Binding state,Mode=TwoWay}" />
+
+
+                    <Picker x:Name="LocalityList"
+                            Title="Select Locality"
+                            ItemsSource="{Binding Localities,Mode=TwoWay}"
+                            ItemDisplayBinding="{Binding name,Mode=TwoWay}"
+                            SelectedItem="{Binding locality,Mode=TwoWay}" />
+
+
+                    <Picker x:Name="AreaList"
+                            Title="Select Area"
+                            ItemsSource="{Binding areas,Mode=TwoWay}"
+                            ItemDisplayBinding="{Binding name,Mode=TwoWay}"
+                            SelectedItem="{Binding area,Mode=TwoWay}" />
+
+
+                    <Entry
+                        Placeholder="Street"
+                        Text="{Binding street,Mode=TwoWay}" />
+
+
+                    <Button
+                        Command="{Binding PostPropertyCommand}"
+                        CommandParameter="{Binding Property}"
+                        Margin="10,0,10,20"
+                        CornerRadius="5"
+                        Text="Update Property" />
+
+
+                </StackLayout>
+
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

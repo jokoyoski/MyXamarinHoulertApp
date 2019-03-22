@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <color name="launcher_background">#C00000</color>
+  <color name="colorPrimary">#C00000</color>
+  <color name="colorPrimaryDark">#C00000</color>
+  <color name="colorAccent">#C00000</color>
+  <color name="actionbar_background">#C00000</color>
+  <color name="toolbar_color_control_normal"> #C00000</color>
+</resources>

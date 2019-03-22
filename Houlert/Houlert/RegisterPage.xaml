@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Houlert.RegisterPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    Android="10,0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+
+
+        <StackLayout
+            VerticalOptions="CenterAndExpand">
+
+            <Label
+                Text="Houlert"
+                TextColor="{StaticResource PrimaryColor}"
+                FontSize="50"
+                HorizontalTextAlignment="Center"
+                FontAttributes="Bold" />
+
+            <Entry
+                Text="{Binding first_name,Mode=TwoWay}"
+                Placeholder="First Name" />
+
+            <Entry
+                Text="{Binding last_name,Mode=TwoWay}"
+                Placeholder="Last Name" />
+
+            <Entry
+                Text="{Binding email,Mode=TwoWay}"
+                Placeholder="Email" />
+
+            <Entry
+                IsPassword="True"
+                Text="{Binding password,Mode=TwoWay}"
+                Placeholder="Password" />
+
+
+            <Entry
+                IsPassword="True"
+                Text="{Binding password_confirmation,Mode=TwoWay}"
+                Placeholder="Confirm Password" />
+
+            <Button
+                Command="{Binding registerCommand}"
+                CommandParameter="{Binding User}"
+                CornerRadius="5"
+                Text="Sign Up" />
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

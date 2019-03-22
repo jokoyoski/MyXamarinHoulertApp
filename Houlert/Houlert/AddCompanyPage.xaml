@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Houlert.AddCompanyPage"
+             Title="Create Company">
+    <ContentPage.Content>
+        <StackLayout x:Name="PropertyName" Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <ScrollView
+                Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <StackLayout
+                    VerticalOptions="CenterAndExpand"
+                    Margin="0,0,0,20">
+
+                    <Label
+                        Text="Create Company"
+                        TextColor="{StaticResource PrimaryColor}"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        FontAttributes="Bold" />
+
+                    <Entry
+                        Placeholder="Company Name"
+                        Text="{Binding name,Mode=TwoWay}" />
+
+
+                    <Entry
+                        Keyboard="Numeric"
+                        Placeholder="Company Mobile Number"
+                        Text="{Binding mobile,Mode=TwoWay}" />
+
+
+                    <Entry
+                        Keyboard="Email"
+                        Placeholder="Compny Email Address"
+                        Text="{Binding email,Mode=TwoWay}" />
+
+
+                    <Entry
+
+                        Placeholder="Company Website"
+                        Text="{Binding website,Mode=TwoWay}" />
+
+
+                    <Entry
+                        Placeholder="Company Address"
+                        Text="{Binding address,Mode=TwoWay}" />
+
+
+                    <Picker x:Name="StateList"
+                            Title="Select State"
+                            ItemsSource="{Binding States,Mode=TwoWay}"
+                            ItemDisplayBinding="{Binding name,Mode=TwoWay}"
+                            SelectedItem="{Binding state,Mode=TwoWay}" />
+
+                    <!-- <Button Text="Upload Logo" -->
+                    <!--         TextColor="{Binding White}" -->
+                    <!--         BackgroundColor="{Binding PrimaryColor}" -->
+                    <!--         Clicked="UploadLogo" /> -->
+                    <!-- -->
+                    <!-- <Label -->
+                    <!--     -->
+                    <!-- -->
+                    <!--     x:Name="LocalPathLabel" -->
+                    <!--     VerticalOptions="CenterAndExpand" -->
+                    <!--     HorizontalOptions="CenterAndExpand" /> -->
+                    <!-- -->
+                    <!-- <Image x:Name="FileImage" -->
+                    <!--        WidthRequest="400" -->
+                    <!--        HeightRequest="220" /> -->
+
+                    <Button
+                        Command="{Binding AddCompanyCommand}"
+                        CommandParameter="{Binding Company}"
+                        Margin="10,0,10,0"
+                        CornerRadius="5"
+                        Text="Create Company" />
+
+
+                </StackLayout>
+
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

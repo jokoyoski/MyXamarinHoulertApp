@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Houlert.PropertyDetailsPage"
+             NavigationPage.HasNavigationBar="True"
+             Title="{Binding Property.title}">
+
+    <ContentPage.Content>
+        <StackLayout x:Name="PropertyName" Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <ScrollView
+                Orientation="Vertical" VerticalOptions="StartAndExpand">
+
+
+                <StackLayout
+                    Margin="20, 20">
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Title" />
+
+
+                        <Label Text="{Binding Property.title}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Property Purpose" />
+
+
+                        <Label Text="{Binding Property.property_purpose.name}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Property Use" />
+
+
+                        <Label Text="{Binding Property.property_use.name}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Property Type" />
+
+
+                        <Label Text="{Binding Property.property_type.name}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Property Sub Type" />
+
+
+                        <Label Text="{Binding Property.property_sub_type.name}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Bedroom" />
+
+
+                        <Label Text="{Binding Property.bedroom}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Bathroom" />
+
+
+                        <Label Text="{Binding Property.bathroom}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Toilet" />
+
+
+                        <Label Text="{Binding Property.toilet}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Price" />
+
+
+                        <Label Text="{Binding Property.price}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Address" />
+
+
+                        <Label Text="{Binding Property.street}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Area" />
+
+
+                        <Label Text="{Binding Property.area.name}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Locality" />
+
+
+                        <Label Text="{Binding Property.locality.name}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="State" />
+
+
+                        <Label Text="{Binding Property.state.name}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Short Description" />
+
+
+                        <Label Text="{Binding Property.short_description}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold"
+                               FontSize="Small" Text="Description" />
+
+
+                        <Label Text="{Binding Property.description}"
+                               TextColor="{StaticResource BlackColor}"
+                               HorizontalOptions="Start" />
+                    </StackLayout>
+
+
+                    <Button
+                        Command="{Binding  editPropertyCommand}"
+                        CommandParameter="{Binding Property}"
+                        Margin="10,0,10,20"
+                        CornerRadius="5"
+                        Text="Edit Property" />
+
+                </StackLayout>
+
+
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

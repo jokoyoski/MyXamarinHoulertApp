@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Houlert"
+             x:Class="Houlert.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    Android="10,0" />
+    </ContentPage.Padding>
+
+    <ContentPage.Resources>
+        <!-- <Style x:Key="LoginButton" TargetType="Button"> -->
+        <!--     <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" /> -->
+        <!-- -->
+        <!--     <Setter Property="TextColor" Value="{StaticResource WhiteColor}" /> -->
+        <!--     <Setter Property="Margin" Value="0 ,10" /> -->
+        <!--     <Setter Property="CornerRadius" Value="10" /> -->
+        <!-- -->
+        <!-- </Style> -->
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+
+        <StackLayout Spacing="80" VerticalOptions="CenterAndExpand">
+
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Image x:Name="IconImage"
+                       Aspect="AspectFit"
+                       HorizontalOptions="FillAndExpand"
+                       Margin="0,0,0,50"
+                       Source="logo.png" />
+
+                <Label FontSize="20"
+                       FontFamily="Arial"
+                       TextColor="{StaticResource WhiteColor}"
+                       Text="Get connected fast !" />
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+
+               
+                <Button
+
+                    Command="{Binding loginCommand }"
+
+                    BorderColor="{StaticResource WhiteColor}"
+                    BorderWidth="1"
+                    CornerRadius="5"
+                    Margin="20,0"
+                    Text="Login" />
+
+
+                <Button WidthRequest="100"
+                        Command="{Binding  RegisterCommand}"
+
+                        BorderColor="{StaticResource WhiteColor}"
+                        BorderWidth="1"
+                        CornerRadius="5"
+                        Margin="20,0"
+                        Text="Create an account" />
+
+                <Label
+                    HorizontalTextAlignment="Center"
+                    Margin="0,20,0,0"
+                    FontAttributes="Italic"
+                    Text="Forgot Password?"
+                    TextColor="{StaticResource WhiteColor}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTappedGesture"
+                                              NumberOfTapsRequired="1" />
+
+
+                    </Label.GestureRecognizers>
+                </Label>
+
+
+
+
+               
+            </StackLayout>
+
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+
+
+</ContentPage>

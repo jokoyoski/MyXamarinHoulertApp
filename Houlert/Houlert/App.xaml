@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Houlert.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#C00000</Color>
+            <Color x:Key="PrimaryColorDark">#880000</Color>
+            <Color x:Key="PrimaryColor:Light">#fb4c2e</Color>
+
+            <Color x:Key="WhiteColor">#FFFFFF</Color>
+            <Color x:Key="AshColor">#b2beb5</Color>
+
+            <Color x:Key="BlackColor">#000000</Color>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="Margin">0 ,10</Setter>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
